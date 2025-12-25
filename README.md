@@ -1,10 +1,66 @@
-# CRUD — Conceito Básico
+# CRUD Django – Cadastro de Plantas
 
-CRUD é um acrônimo que representa as quatro operações básicas realizadas em sistemas que manipulam dados:
+Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um **CRUD (Create, Read, Update, Delete)**. A aplicação permite o cadastro e gerenciamento de informações sobre plantas, utilizando **Bootstrap** para a estilização da interface.
 
-- **Create (Criar):** inserir novos registros no sistema.
-- **Read (Ler):** consultar ou visualizar dados existentes.
-- **Update (Atualizar):** modificar registros já cadastrados.
-- **Delete (Excluir):** remover registros do sistema.
+## Funcionalidades
+- Cadastrar plantas  
+- Listar plantas cadastradas  
+- Atualizar informações  
+- Excluir registros  
 
-Essas operações formam a base da maioria das aplicações web, APIs e sistemas de gerenciamento de dados, incluindo aplicações desenvolvidas com Django.
+## Campos do cadastro
+- Nome  
+- Nome científico  
+- Descrição  
+- Região  
+
+## Tecnologias utilizadas
+- Python  
+- Django  
+- SQLite  
+- HTML  
+- Bootstrap  
+- Git e GitHub  
+
+## Como executar o projeto
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/edugrocha/CRUD-DJANGO.git
+  ```
+
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd CRUD-DJANGO
+   ```
+3. Crie e ative o ambiente virtual:
+
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+4. Instale o Django:
+
+   ```bash
+   pip install django
+   ```
+5. Execute as migrações:
+
+   ```bash
+   python manage.py migrate
+   ```
+6. Inicie o servidor:
+
+   ```bash
+   python manage.py runserver
+   ```
+7. Acesse no navegador:
+
+   ```
+   http://127.0.0.1:8000/
+   ```
+
+## Objetivo do projeto
+
+Projeto de estudo para consolidar os conceitos básicos do Django, incluindo criação de CRUD, organização de apps, rotas, models, views e uso do Bootstrap para interfaces responsivas.
