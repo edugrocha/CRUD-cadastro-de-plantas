@@ -27,8 +27,7 @@ Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um 
 
    ```bash
    git clone https://github.com/edugrocha/CRUD-DJANGO.git
-  ```
-
+   ```
 2. Acesse a pasta do projeto:
 
    ```bash
