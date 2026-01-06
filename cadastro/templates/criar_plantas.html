@@ -17,13 +17,22 @@
             <!-- class="form-control" pertence ao bootstrap -->
             <br>
             <label for="">Nome Científico:</label>
-            <input type="text" name="nomeCientifico" class="form-control" placeholder="Digite o nome científico da planta">
+            <input type="text" name="nome_cientifico" class="form-control" placeholder="Digite o nome científico da planta">
             <br>
             <label for="">Descrição:</label>
             <input type="text" name="descricao" class="form-control" placeholder="Digite uma descrição sobre a planta">
             <br>
-            <label for="">Região de Origem:</label>
-            <input type="text" name="regiao" class="form-control" placeholder="Digite a região de origem da planta">
+            <label for="">Parte Utilizada:</label>
+            <input type="text" name="parte_utilizada" class="form-control" placeholder="Digite a parte utilizada da planta">
+            <br>
+            <label for="">Usos:</label>
+            <input type="text" name="usos" class="form-control" placeholder="Digite os usos da planta">
+            <br>
+            <label for="">Região:</label>
+            <input type="text" name="regiao" class="form-control" placeholder="Digite a região onde foi encontrada a planta">
+            <br>
+            <label for="">Origem:</label>
+            <input type="text" name="origem" class="form-control" placeholder="Digite a origem da planta">
             <br>
             <input type="submit" value="Cadastrar nova planta" class="btn btn-success">
         </form>
@@ -35,7 +44,10 @@
                     <th scope="col">Nome</th>
                     <th scope="col">Nome Científico</th>
                     <th scope="col">Descricao</th>
-                    <th scope="col">Região de Origem</th>
+                    <th scope="col">Parte Utilizada</th>
+                    <th scope="col">Usos</th>
+                    <th scope="col">Região</th>
+                    <th scope="col">Origem</th>
                     <th scope="col">Atualizar</th>
                     <th scope="col">Deletar</th>
                 </tr>
@@ -48,13 +60,22 @@
                             <input type="text" name="nome" value="{{i.nome}}" class="form-control">
                         </td>
                         <td>
-                            <input type="text" name="nomeCientifico" value="{{i.nomeCientifico}}" class="form-control">
+                            <input type="text" name="nome_cientifico" value="{{i.nome_cientifico}}" class="form-control">
                         </td>
                         <td>
                             <input type="text" name="descricao" value="{{i.descricao}}" class="form-control">
                         </td>
                         <td>
+                            <input type="text" name="parte_utilizada" value="{{i.parte_utilizada}}" class="form-control">
+                        </td>
+                        <td>
+                            <input type="text" name="usos" value="{{i.usos}}" class="form-control">
+                        </td>
+                        <td>
                             <input type="text" name="regiao" value="{{i.regiao}}" class="form-control">
+                        </td>
+                        <td>
+                            <input type="text" name="origem" value="{{i.origem}}" class="form-control">
                         </td>
                         <td>
                             <input type="submit" value="Atualizar" class="btn btn-warning">

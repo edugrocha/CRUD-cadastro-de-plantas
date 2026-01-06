@@ -5,9 +5,12 @@ def criar_planta(request):
     if request.method == 'POST':
         CadastroPlantas.objects.create(
             nome=request.POST.get('nome'),
-            nomeCientifico=request.POST.get('nomeCientifico'),
+            nome_cientifico=request.POST.get('nome_cientifico'),
             descricao=request.POST.get('descricao'),
+            parte_utilizada=request.POST.get('parte_utilizada'),
+            usos=request.POST.get('usos'),
             regiao=request.POST.get('regiao'),
+            origem=request.POST.get('origem'),
         )
         return redirect('criar_plantas')
 
@@ -26,9 +29,12 @@ def atualizar_planta(request, id):
 
     if request.method == 'POST':
         planta.nome = request.POST.get('nome')
-        planta.nomeCientifico = request.POST.get('nomeCientifico')
+        planta.nome_cientifico = request.POST.get('nome_cientifico')
         planta.descricao = request.POST.get('descricao')
+        planta.parte_utilizada = request.POST.get('parte_utilizada')
+        planta.usos = request.POST.get('usos')
         planta.regiao = request.POST.get('regiao')
+        planta.origem = request.POST.get('origem')
         planta.save()
         return redirect('criar_plantas')
 

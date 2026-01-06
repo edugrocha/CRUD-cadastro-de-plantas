@@ -1,6 +1,6 @@
 # CRUD Django – Cadastro de Plantas
 
-Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um **CRUD (Create, Read, Update, Delete)**. A aplicação permite o cadastro e gerenciamento de informações sobre plantas, utilizando **Bootstrap** para a estilização da interface.
+Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um **CRUD (Create, Read, Update, Delete)**. A aplicação permite o cadastro e gerenciamento de informações sobre plantas, utilizando o PostgreSQL como banco de dados robusto, e **Bootstrap** para a estilização da interface.
 
 ## Funcionalidades
 - Cadastrar plantas  
@@ -12,12 +12,15 @@ Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um 
 - Nome  
 - Nome científico  
 - Descrição  
+- Partes utilizadas
+- Usos
 - Região  
+- Origem
 
 ## Tecnologias utilizadas
 - Python  
 - Django  
-- SQLite  
+- PostgreSQL 
 - HTML  
 - Bootstrap  
 - Git e GitHub  
@@ -37,29 +40,54 @@ Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um 
 
    ```bash
    python -m venv venv
+
+   # Linux / Mac
+   source venv/bin/activate
+
+   # Windows
    venv\Scripts\activate
    ```
-4. Instale o Django:
+4. Instale as dependências
 
    ```bash
-   pip install django
+   pip install -r requirements.txt
    ```
-5. Execute as migrações:
+5. Crie o arquivo .env
+
+Na raiz do projeto (mesmo nível do manage.py), crie um arquivo chamado .env:
 
    ```bash
+   DB_NAME=CadastroPlantas
+   DB_USER=postgres
+   DB_PASSWORD=sua_senha_aqui
+   DB_HOST=127.0.0.1
+   DB_PORT=5432
+   ```
+
+Importante:
+O arquivo .env não é versionado;
+Nunca suba credenciais diretamente no código;
+Cada ambiente (local, produção, servidor) deve possuir seu próprio .env.
+
+6. Execute as migrações:
+
+   ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
-6. Inicie o servidor:
+7. Inicie o servidor:
 
    ```bash
    python manage.py runserver
    ```
-7. Acesse no navegador:
+8. Acesse no navegador:
 
    ```
-   http://127.0.0.1:8000/
+   http://127.0.0.1:8000/criar_plantas/
    ```
 
 ## Objetivo do projeto
 
-Projeto de estudo para consolidar os conceitos básicos do Django, incluindo criação de CRUD, organização de apps, rotas, models, views e uso do Bootstrap para interfaces responsivas.
+Projeto de estudo para consolidar os conceitos básicos do Django com PostgreSQL. 
+Servirá de MVP para o desenvolvimento de um sistema funcional.
+O sistema pertencerá ao projeto de extensão Farmácia Viva, no IFPE Jaboatão dos Guararapes, em parceria com o IFPE Vitória de Santo Antão.
