@@ -29,12 +29,12 @@ Projeto desenvolvido em **Django** com o objetivo de praticar a criação de um 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/edugrocha/CRUD-DJANGO.git
+   git clone https://github.com/edugrocha/CRUD-cadastro-de-plantas.git
    ```
 2. Acesse a pasta do projeto:
 
    ```bash
-   cd CRUD-DJANGO
+   cd CRUD-cadastro-de-plantas
    ```
 3. Crie e ative o ambiente virtual:
 
